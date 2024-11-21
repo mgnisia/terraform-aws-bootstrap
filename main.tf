@@ -41,6 +41,7 @@ module "terraform_state_bucket_logs" {
 
   s3_bucket_name          = local.logging_bucket
   default_allow           = false
+  allow_s3                = true
   s3_log_bucket_retention = var.log_retention
   versioning_status       = var.log_bucket_versioning
 
